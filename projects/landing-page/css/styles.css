@@ -1,15 +1,4 @@
-/*
- *
- * CSS written based on SMACSS architecture.
- * To learn more, visit: http://smacss.com/
- * 
- * For simplicity, no reset or normalize is added. 
- * To learn more, visit: https://css-tricks.com/reboot-resets-reasoning/
- *
-*/
 
-
-/* ---- Base Rules ---- */
 body {
     background: rgb(136,203,171);
     background: linear-gradient(0deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 100%);
@@ -24,6 +13,39 @@ h1 {
     font-family: 'Fira Sans', sans-serif;
     font-size: 3em;
     margin: 2em 1rem;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: blueviolet;
+}
+
+.logo{
+    color: coral;
+    letter-spacing: 5px;
+    font-size: 22px;
+    margin: 15px;
+}
+
+.navbar__list {
+    display: flex;
+    width: 45%;
+    justify-content: space-around;
+}
+
+.navbar__list li {
+    list-style: none;
+}
+
+.icon{
+    display: none;
+    width: 25px;
+    height: 2px;
+    color: cornsilk;
+    margin: 5px;
 }
 
 @media only screen and (min-width: 35em){
@@ -60,41 +82,13 @@ section {
     min-height: 80vh;
 }
 
-
-/* ---- Module Rules ---- */
-
-/* Navigation Styles*/
-.navbar__menu ul {
-    padding-left: 0;
-    margin: 0;
-    text-align: right;
-}
-
-.navbar__menu li {
-    display: inline-block;
-}
-
-.navbar__menu .menu__link {
-    display: block;
-    padding: 1em;
-    font-weight: bold;
-    text-decoration: none;
-    color: #000;
-}
-
-.navbar__menu .menu__link:hover {
-    background: #333;
-    color: #fff;
-    transition: ease 0.3s all;
-}
-
-/* Header Styles */
 .page__header {
-    background: #fff;
+    background: burlywood;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 5;
+    color: black;
 }
 
 /* Footer Styles */
@@ -107,7 +101,6 @@ section {
 .page__footer p{
     color: #fff;
 }
-
 
 /* ---- Theme Rules ---- */
 /* Landing Container Styles */
@@ -122,7 +115,6 @@ section {
         padding: 4em;
     }
 }
-
 section:nth-of-type(even) .landing__container {
     margin-right: 0;
     margin-left: auto;
@@ -221,3 +213,6 @@ section.your-active-class .landing__container::after {
 		           rotate(-360deg);
 	}
 }
+
+@media only screen and (max-width: 760px){
+    
